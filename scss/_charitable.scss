@@ -1,0 +1,43 @@
+/* **********************************************
+   WP Charitable
+ ************************************************/
+
+.js #charitable-donation-form .donation-amounts .donation-amount input[type=radio]{
+	display: none;
+}
+
+
+.widget_charitable_donate_widget {
+
+	#charitable-donation-form {
+
+		.donation-amounts {
+
+			.donation-amount {
+				width: auto;
+	    		margin-right: 1em;
+	    		font-size: 1.5em;
+	    		background: $offwhite;
+
+	    		&.custom-donation-amount {
+				    float: none;
+				    clear: both;
+				    border: 0;
+				    padding: 0;
+
+				    &.selected {
+				    	background: none;
+				    }
+	    		}
+			}
+
+		}
+
+		.button-primary {
+			font-size: 1.5em;
+			border: 0;
+		}
+
+	}
+
+}

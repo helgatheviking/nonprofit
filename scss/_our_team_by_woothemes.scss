@@ -1,0 +1,18 @@
+/* **********************************************
+   Features by WooThemes
+ ************************************************/
+
+.team-member {
+	h3.member { @extend h4 !optional }
+	.role {
+	    text-transform: uppercase;
+	    font-size: .875em;
+	    font-weight: bold;
+	}
+	.our-team-country {
+		font-size: .875em;
+		span:first-child{
+			font-style: italic;
+		}
+	}
+}

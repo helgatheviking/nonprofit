@@ -1,0 +1,16 @@
+form {
+	legend {
+		 @include caps;
+		 border: 0;
+	}
+
+	.col-1-wrap,  .col-2-wrap {
+	    width: 48%;
+	    float: left;
+	    margin-right: 4%;
+	}
+	
+	.col-2-wrap {
+	    margin-right: 0;
+	}
+}

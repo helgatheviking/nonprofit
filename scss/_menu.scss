@@ -1,0 +1,10 @@
+/* Main Menu
+-------------------------------------------------------------- */
+.fl-page-nav .navbar-nav > li > a { letter-spacing: 1px }
+
+@media (min-width: 992px){
+    .fl-page-nav-right .fl-page-nav-wrap .navbar-nav > li.current-menu-item > a {
+        color: inherit;
+        font-weight: bold;
+    }
+}

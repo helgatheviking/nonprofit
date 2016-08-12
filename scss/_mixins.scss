@@ -1,0 +1,172 @@
+/* =Mixins/Functions
+-------------------------------------------------------------- */
+/**
+ * clearfix
+ */
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+/**
+ * PX to Rem Sizing
+ *
+ * How to use
+ * @include fontSize(20px);
+ *
+ * Ouputs
+ * font-size: 20px;
+ * font-size: 2.0rem;
+ */
+@function calculateRem($size) {
+  $remSize: $size / 10px;
+  @return #{$remSize}rem;
+}
+
+@mixin fontSize($size) {
+  font-size: $size; //Fallback in px
+  font-size: calculateRem($size);
+}
+
+/* all caps */
+@mixin caps() {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+
+/* =Genericons and Dashicons
+-------------------------------------------------------------- */
+@mixin dashicons {
+	color: $icon-color;
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 16px/1 'Dashicons';
+	vertical-align: middle;
+}
+
+@mixin genericons {
+	color: $icon-color;
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 16px/1 'Genericons';
+	vertical-align: middle;
+}
+
+@mixin giant() { 
+	@include fontSize(60px);
+	margin: 0 0 0.433em; 
+	line-height: 1.3em; /* 78px */ 
+	top: 10px; 
+}
+@mixin huge() { 
+	@include fontSize(48px);
+	margin: 0 0 0.5417em; 
+	line-height: 1.0833em; /* 52px */ 
+}
+
+@mixin small() { 
+	@include fontSize(12px);
+	margin: 0 0 2.1667em; 
+	font-size: 0.75em; /* 12px */ 
+	line-height: 2.1667em; /* 26px */ 
+}
+
+
+@mixin pattern-overlay() {
+    &:after {
+	    content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 0;
+	    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAADCAYAAAC56t6BAAAAGUlEQVQIW2NkYGCoZ2BgaGRkgIB6EAMsAgAdPwKD+nCs1AAAAABJRU5ErkJggg==);
+	}
+}
+
+@mixin button($color: $action-color, $text_color: $white) {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1.2;
+  padding: .75em 1.5em;
+  text-shadow: 0 1px 1px rgba(0,0,0,.3);
+  @include rounded(0);
+  position: relative;
+  opacity: .9999999;
+  overflow: hidden;
+  border: 0;
+  color: $text_color !important;
+  font-weight: normal;
+  background: $color;
+  &:hover {
+    text-decoration: none;
+    background: saturate($color, 10%);
+    border: 0;
+  }
+
+  &:active {
+    position: relative;
+    top: 1px;
+    color: saturate($color, 15%);
+  }
+
+}
+
+@mixin fancybutton($color: $action-color, $text_color: $white) {
+  $darker: darken($color, 5%);
+  @include button($color: $action-color, $text_color: $white);
+
+  &:after, &:before {
+      position: absolute;
+      content: " ";
+      top: 0;
+      left: 0;
+  }
+
+  &:before {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    width: 50%;
+    border-right: 5em solid $color;
+    border-top: 5em solid $darker;
+    margin-left: -50%;
+    z-index: -299;
+    display: block;
+    transition: all .4s ease-in;
+  }
+
+  &:after {
+    background: $color;
+    width: 100%;
+    height: 100%;
+    z-index: -300;
+  }
+
+  &:focus:before, &:hover:before {
+    width: 160%;
+  }
+
+}
+
+@mixin rounded($radius: 0.5em) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin gradient($from, $to) {
+  background: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+  background: -moz-linear-gradient(top,  $from, $to);
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}');
+}

@@ -1,0 +1,40 @@
+/* **********************************************
+   Features by WooThemes
+ ************************************************/
+
+.widget_woothemes_features {
+	//text-align: center;
+	.widgettitle {
+		text-align: left;
+		@include small;
+		@include caps;
+	    margin-bottom: 0;
+	    font-weight: normal;
+	    font-style: italic;
+	}
+	.feature { 
+		float: left; margin-right: 4%; 
+		img{ 
+			-webkit-filter: grayscale(75%);
+			filter: grayscale(75%);
+			transition: opacity .25s ease-in-out;
+		   -moz-transition: opacity .25s ease-in-out;
+		   -webkit-transition: opacity .25s ease-in-out;
+		   max-width: 100%;
+		   height: auto;
+		   &:hover {
+		      -webkit-filter: grayscale(0%);
+			  filter: grayscale(0%);
+		   }
+      
+		}
+		
+	}
+	.columns-2 .feature { width:48%; }
+	.columns-3 .feature { width:30.66%; }
+	.columns-4 .feature { width:22%; }
+	.columns-5 .feature { width:16.8%; }
+	.columns-6 .feature { width:13.33%; }
+	.features .first { clear: both; }
+	.features .last { margin-right: 0; }
+}

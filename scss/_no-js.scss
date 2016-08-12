@@ -1,0 +1,28 @@
+// no-js fallback
+.no-js {
+
+	.site-navigation .menu-toggle { display: none; }
+	.site-navigation .menu, .site-navigation .nav-menu { 
+		display: block; 
+
+		li {
+		    display: inline-block;
+		    position: relative;
+		}
+	}
+
+
+	// beaver builder number animations
+	.fl-number-bar, .fl-number-circle-container svg {
+		display: none;
+	}
+
+
+	@media screen and (max-width: 800px){
+		.site-navigation{
+			float: none;
+			clear: both;
+		}
+	}
+
+}

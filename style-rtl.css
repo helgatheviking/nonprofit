@@ -1,0 +1,508 @@
+/**
+ * Theme Name:  Non Profit
+ * Theme URI:   https://www.github.com/helgatheviking/nonprofit
+ * Author:      Kathy Darling
+ * Author URI:  http://www.kathyisawesome.com
+ * Description: A custom child theme of the Beaver Builder Theme for my projects
+ * Version: 1.0.0
+ * License:     GNU General Public License v3 or later
+ * License URI: http://www.gnu.org/licenses/gpl-3.0.html
+ * Text Domain: nonprofit
+ * Domain Path: /languages/
+ * Tags:        black, blue, green, gray, orange, red, white, yellow, dark, light, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, fixed-layout, fluid-layout, responsive-layout, buddypress, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, photoblogging
+ * Template:	bb-theme
+ * 
+ * Beaver Builder Theme, by The Beaver Builder Team
+ *
+ * Generated with sass from scss/style.scss
+ */
+/* =Variables
+-------------------------------------------------------------- */
+/* =Mixins/Functions
+-------------------------------------------------------------- */
+/**
+ * clearfix
+ */
+/**
+ * PX to Rem Sizing
+ *
+ * How to use
+ * @include fontSize(20px);
+ *
+ * Ouputs
+ * font-size: 20px;
+ * font-size: 2.0rem;
+ */
+/* all caps */
+/* =Genericons and Dashicons
+-------------------------------------------------------------- */
+/* =Typography
+-------------------------------------------------------------- */
+h1, h2, h3, .fl-builder .widgettitle, h4, .team-member h3.member, .team-member .fl-builder .member.widgettitle, .fl-builder .team-member .member.widgettitle, .fl-builder h2.fl-post-feed-title, h5, h6, .heading {
+  font-family: Futura, "Century Gothic", AppleGothic, sans-serif;
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+h1::after, h2::after, h3::after, .fl-builder .widgettitle::after, h4::after, .team-member h3.member::after, .team-member .fl-builder .member.widgettitle::after, .fl-builder .team-member .member.widgettitle::after, .fl-builder h2.fl-post-feed-title::after, h5::after, h6::after, .heading::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+h1 {
+  font-size: 42px;
+  font-size: 4.2rem;
+}
+
+h2 {
+  font-size: 34px;
+  font-size: 3.4rem;
+}
+
+h3, .fl-builder .widgettitle {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+
+h4, .team-member h3.member, .team-member .fl-builder .member.widgettitle, .fl-builder .team-member .member.widgettitle, .fl-builder h2.fl-post-feed-title {
+  font-size: 21px;
+  font-size: 2.1rem;
+}
+
+h5 {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+h6 {
+  font-size: 13px;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+blockquote p {
+  font-size: 125%;
+}
+
+/* Main Menu
+-------------------------------------------------------------- */
+.fl-page-nav .navbar-nav > li > a {
+  letter-spacing: 1px;
+}
+
+@media (min-width: 992px) {
+  .fl-page-nav-right .fl-page-nav-wrap .navbar-nav > li.current-menu-item > a {
+    color: inherit;
+    font-weight: bold;
+  }
+}
+/* **********************************************
+   Forms and buttons
+ ************************************************/
+.fl-page button:not(.navbar-toggle), .fl-page li.menu-item.button > a, .fl-page a.button, .fl-page input[type="button"], .fl-page input[type="reset"], .fl-page input[type="submit"] {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1.2;
+  padding: .75em 1.5em;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  position: relative;
+  opacity: .9999999;
+  overflow: hidden;
+  border: 0;
+  color: #FFFFFF !important;
+  font-weight: normal;
+  background: #798693;
+}
+.fl-page button:not(.navbar-toggle):hover, .fl-page li.menu-item.button > a:hover, .fl-page a.button:hover, .fl-page input[type="button"]:hover, .fl-page input[type="reset"]:hover, .fl-page input[type="submit"]:hover {
+  text-decoration: none;
+  background: #6d869f;
+  border: 0;
+}
+.fl-page button:not(.navbar-toggle):active, .fl-page li.menu-item.button > a:active, .fl-page a.button:active, .fl-page input[type="button"]:active, .fl-page input[type="reset"]:active, .fl-page input[type="submit"]:active {
+  position: relative;
+  top: 1px;
+  color: #6786a5;
+}
+.nonprofit-fancy-buttons .fl-page button:not(.navbar-toggle), .nonprofit-fancy-buttons .fl-page li.menu-item.button > a, .nonprofit-fancy-buttons .fl-page a.button, .nonprofit-fancy-buttons .fl-page input[type="button"], .nonprofit-fancy-buttons .fl-page input[type="reset"], .nonprofit-fancy-buttons .fl-page input[type="submit"] {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1.2;
+  padding: .75em 1.5em;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  position: relative;
+  opacity: .9999999;
+  overflow: hidden;
+  border: 0;
+  color: #FFFFFF !important;
+  font-weight: normal;
+  background: #d31a20;
+}
+.nonprofit-fancy-buttons .fl-page button:not(.navbar-toggle):hover, .nonprofit-fancy-buttons .fl-page li.menu-item.button > a:hover, .nonprofit-fancy-buttons .fl-page a.button:hover, .nonprofit-fancy-buttons .fl-page input[type="button"]:hover, .nonprofit-fancy-buttons .fl-page input[type="reset"]:hover, .nonprofit-fancy-buttons .fl-page input[type="submit"]:hover {
+  text-decoration: none;
+  background: #df0e15;
+  border: 0;
+}
+.nonprofit-fancy-buttons .fl-page button:not(.navbar-toggle):active, .nonprofit-fancy-buttons .fl-page li.menu-item.button > a:active, .nonprofit-fancy-buttons .fl-page a.button:active, .nonprofit-fancy-buttons .fl-page input[type="button"]:active, .nonprofit-fancy-buttons .fl-page input[type="reset"]:active, .nonprofit-fancy-buttons .fl-page input[type="submit"]:active {
+  position: relative;
+  top: 1px;
+  color: #e5080f;
+}
+.nonprofit-fancy-buttons .fl-page button:not(.navbar-toggle):after, .nonprofit-fancy-buttons .fl-page button:not(.navbar-toggle):before, .nonprofit-fancy-buttons .fl-page li.menu-item.button > a:after, .nonprofit-fancy-buttons .fl-page li.menu-item.button > a:before, .nonprofit-fancy-buttons .fl-page a.button:after, .nonprofit-fancy-buttons .fl-page a.button:before, .nonprofit-fancy-buttons .fl-page input[type="button"]:after, .nonprofit-fancy-buttons .fl-page input[type="button"]:before, .nonprofit-fancy-buttons .fl-page input[type="reset"]:after, .nonprofit-fancy-buttons .fl-page input[type="reset"]:before, .nonprofit-fancy-buttons .fl-page input[type="submit"]:after, .nonprofit-fancy-buttons .fl-page input[type="submit"]:before {
+  position: absolute;
+  content: " ";
+  top: 0;
+  right: 0;
+}
+.nonprofit-fancy-buttons .fl-page button:not(.navbar-toggle):before, .nonprofit-fancy-buttons .fl-page li.menu-item.button > a:before, .nonprofit-fancy-buttons .fl-page a.button:before, .nonprofit-fancy-buttons .fl-page input[type="button"]:before, .nonprofit-fancy-buttons .fl-page input[type="reset"]:before, .nonprofit-fancy-buttons .fl-page input[type="submit"]:before {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 50%;
+  border-left: 5em solid #798693;
+  border-top: 5em solid #6c7986;
+  margin-right: -50%;
+  z-index: -299;
+  display: block;
+  transition: all .4s ease-in;
+}
+.nonprofit-fancy-buttons .fl-page button:not(.navbar-toggle):after, .nonprofit-fancy-buttons .fl-page li.menu-item.button > a:after, .nonprofit-fancy-buttons .fl-page a.button:after, .nonprofit-fancy-buttons .fl-page input[type="button"]:after, .nonprofit-fancy-buttons .fl-page input[type="reset"]:after, .nonprofit-fancy-buttons .fl-page input[type="submit"]:after {
+  background: #798693;
+  width: 100%;
+  height: 100%;
+  z-index: -300;
+}
+.nonprofit-fancy-buttons .fl-page button:not(.navbar-toggle):focus:before, .nonprofit-fancy-buttons .fl-page button:not(.navbar-toggle):hover:before, .nonprofit-fancy-buttons .fl-page li.menu-item.button > a:focus:before, .nonprofit-fancy-buttons .fl-page li.menu-item.button > a:hover:before, .nonprofit-fancy-buttons .fl-page a.button:focus:before, .nonprofit-fancy-buttons .fl-page a.button:hover:before, .nonprofit-fancy-buttons .fl-page input[type="button"]:focus:before, .nonprofit-fancy-buttons .fl-page input[type="button"]:hover:before, .nonprofit-fancy-buttons .fl-page input[type="reset"]:focus:before, .nonprofit-fancy-buttons .fl-page input[type="reset"]:hover:before, .nonprofit-fancy-buttons .fl-page input[type="submit"]:focus:before, .nonprofit-fancy-buttons .fl-page input[type="submit"]:hover:before {
+  width: 160%;
+}
+.fl-page .navbar .menu .button a,
+.fl-page .navbar .nav-menu .button a {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1.2;
+  padding: .75em 1.5em;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  position: relative;
+  opacity: .9999999;
+  overflow: hidden;
+  border: 0;
+  color: #FFFFFF !important;
+  font-weight: normal;
+  background: #00cad8;
+  padding: 15px;
+}
+.fl-page .navbar .menu .button a:hover,
+.fl-page .navbar .nav-menu .button a:hover {
+  text-decoration: none;
+  background: #00cad8;
+  border: 0;
+}
+.fl-page .navbar .menu .button a:active,
+.fl-page .navbar .nav-menu .button a:active {
+  position: relative;
+  top: 1px;
+  color: #00cad8;
+}
+.fl-page .navbar .menu .button a:hover,
+.fl-page .navbar .nav-menu .button a:hover {
+  color: #FFFFFF;
+}
+.nonprofit-fancy-buttons .fl-page .navbar .menu .button, .nonprofit-fancy-buttons
+.fl-page .navbar .nav-menu .button {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1.2;
+  padding: .75em 1.5em;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  position: relative;
+  opacity: .9999999;
+  overflow: hidden;
+  border: 0;
+  color: #FFFFFF !important;
+  font-weight: normal;
+  background: #d31a20;
+  padding: 15px;
+}
+.nonprofit-fancy-buttons .fl-page .navbar .menu .button:hover, .nonprofit-fancy-buttons
+.fl-page .navbar .nav-menu .button:hover {
+  text-decoration: none;
+  background: #df0e15;
+  border: 0;
+}
+.nonprofit-fancy-buttons .fl-page .navbar .menu .button:active, .nonprofit-fancy-buttons
+.fl-page .navbar .nav-menu .button:active {
+  position: relative;
+  top: 1px;
+  color: #e5080f;
+}
+.nonprofit-fancy-buttons .fl-page .navbar .menu .button:after, .nonprofit-fancy-buttons .fl-page .navbar .menu .button:before, .nonprofit-fancy-buttons
+.fl-page .navbar .nav-menu .button:after, .nonprofit-fancy-buttons
+.fl-page .navbar .nav-menu .button:before {
+  position: absolute;
+  content: " ";
+  top: 0;
+  right: 0;
+}
+.nonprofit-fancy-buttons .fl-page .navbar .menu .button:before, .nonprofit-fancy-buttons
+.fl-page .navbar .nav-menu .button:before {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 50%;
+  border-left: 5em solid #00cad8;
+  border-top: 5em solid #00b2bf;
+  margin-right: -50%;
+  z-index: -299;
+  display: block;
+  transition: all .4s ease-in;
+}
+.nonprofit-fancy-buttons .fl-page .navbar .menu .button:after, .nonprofit-fancy-buttons
+.fl-page .navbar .nav-menu .button:after {
+  background: #00cad8;
+  width: 100%;
+  height: 100%;
+  z-index: -300;
+}
+.nonprofit-fancy-buttons .fl-page .navbar .menu .button:focus:before, .nonprofit-fancy-buttons .fl-page .navbar .menu .button:hover:before, .nonprofit-fancy-buttons
+.fl-page .navbar .nav-menu .button:focus:before, .nonprofit-fancy-buttons
+.fl-page .navbar .nav-menu .button:hover:before {
+  width: 160%;
+}
+.nonprofit-fancy-buttons .fl-page .navbar .menu .button:hover, .nonprofit-fancy-buttons
+.fl-page .navbar .nav-menu .button:hover {
+  color: #FFFFFF;
+}
+
+form legend {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 0;
+}
+form .col-1-wrap, form .col-2-wrap {
+  width: 48%;
+  float: right;
+  margin-left: 4%;
+}
+form .col-2-wrap {
+  margin-left: 0;
+}
+
+/* **********************************************
+   Widgets
+ ************************************************/
+/* **********************************************
+   Features by WooThemes
+ ************************************************/
+.widget_woothemes_features .widgettitle {
+  text-align: right;
+  font-size: 12px;
+  font-size: 1.2rem;
+  margin: 0 0 2.1667em;
+  font-size: 0.75em;
+  /* 12px */
+  line-height: 2.1667em;
+  /* 26px */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+  font-weight: normal;
+  font-style: italic;
+}
+.widget_woothemes_features .feature {
+  float: right;
+  margin-left: 4%;
+}
+.widget_woothemes_features .feature img {
+  -webkit-filter: grayscale(75%);
+  filter: grayscale(75%);
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+  max-width: 100%;
+  height: auto;
+}
+.widget_woothemes_features .feature img:hover {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+.widget_woothemes_features .columns-2 .feature {
+  width: 48%;
+}
+.widget_woothemes_features .columns-3 .feature {
+  width: 30.66%;
+}
+.widget_woothemes_features .columns-4 .feature {
+  width: 22%;
+}
+.widget_woothemes_features .columns-5 .feature {
+  width: 16.8%;
+}
+.widget_woothemes_features .columns-6 .feature {
+  width: 13.33%;
+}
+.widget_woothemes_features .features .first {
+  clear: both;
+}
+.widget_woothemes_features .features .last {
+  margin-left: 0;
+}
+
+/* **********************************************
+   Features by WooThemes
+ ************************************************/
+.team-member .role {
+  text-transform: uppercase;
+  font-size: .875em;
+  font-weight: bold;
+}
+.team-member .our-team-country {
+  font-size: .875em;
+}
+.team-member .our-team-country span:first-child {
+  font-style: italic;
+}
+
+/* **********************************************
+   Beaver Builder
+ ************************************************/
+.fl-builder .fl-row.pattern-overlay .fl-row-content-wrap:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAADCAYAAAC56t6BAAAAGUlEQVQIW2NkYGCoZ2BgaGRkgIB6EAMsAgAdPwKD+nCs1AAAAABJRU5ErkJggg==);
+}
+.fl-builder .fl-row-fixed-width {
+  max-width: 1100px;
+}
+.fl-builder blockquote {
+  border: 0;
+}
+.fl-builder .widget {
+  margin-bottom: 44px;
+  margin-bottom: 4.4rem;
+  font-size: inherit;
+}
+.fl-builder .widgettitle {
+  margin-top: 0;
+}
+.fl-builder h2.fl-post-feed-title {
+  margin: 0 0 11px 0;
+  margin: 0 0 1.1rem 0;
+}
+.fl-builder .fl-post-feed-post {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.fl-builder .fl-number .fl-number-before-text, .fl-builder .fl-number .fl-number-after-text {
+  font-size: 65%;
+  line-height: 1.2;
+}
+.fl-builder .fl-row.feature h1, .fl-builder .fl-row.feature h2, .fl-builder .fl-row.feature h3, .fl-builder .fl-row.feature .widgettitle {
+  text-shadow: -2px -2px 2px #000;
+  text-shadow: -2px -2px 2px rgba(0, 0, 0, 0.45);
+}
+.fl-builder .fl-post-grid-text {
+  padding: 10px;
+}
+
+.single-fl-builder-template .site-content > .container {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+  clear: both;
+}
+.single-fl-builder-template .site-content > .container .site-main {
+  width: 100%;
+  float: none;
+}
+
+/* WooCommerce
+-------------------------------------------------------------- */
+.woocommerce ul.products li.product a img {
+  border: 0 !important;
+}
+.woocommerce ul.products li.product a img:hover {
+  border: 0 !important;
+}
+.woocommerce button, .woocommerce .button {
+  border-radius: 0;
+}
+
+/* **********************************************
+   WP Charitable
+ ************************************************/
+.js #charitable-donation-form .donation-amounts .donation-amount input[type=radio] {
+  display: none;
+}
+
+.widget_charitable_donate_widget #charitable-donation-form .donation-amounts .donation-amount {
+  width: auto;
+  margin-left: 1em;
+  font-size: 1.5em;
+  background: #b9bcbf;
+}
+.widget_charitable_donate_widget #charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount {
+  float: none;
+  clear: both;
+  border: 0;
+  padding: 0;
+}
+.widget_charitable_donate_widget #charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount.selected {
+  background: none;
+}
+.widget_charitable_donate_widget #charitable-donation-form .button-primary {
+  font-size: 1.5em;
+  border: 0;
+}
+
+.no-js .site-navigation .menu-toggle {
+  display: none;
+}
+.no-js .site-navigation .menu, .no-js .site-navigation .nav-menu {
+  display: block;
+}
+.no-js .site-navigation .menu li, .no-js .site-navigation .nav-menu li {
+  display: inline-block;
+  position: relative;
+}
+.no-js .fl-number-bar, .no-js .fl-number-circle-container svg {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .no-js .site-navigation {
+    float: none;
+    clear: both;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

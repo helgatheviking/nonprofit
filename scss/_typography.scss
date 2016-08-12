@@ -1,0 +1,33 @@
+/* =Typography
+-------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6, .heading {
+	@include clearfix;
+	font-family: $title;
+	font-weight: bold;
+	line-height: 1.2;
+	letter-spacing: 1px;
+}
+
+h1 {
+	@include fontSize(42px);
+}
+h2 {
+	@include fontSize(34px);
+}
+h3 {
+	@include fontSize(24px);
+}
+h4 {
+	@include fontSize(21px);
+}
+h5 {
+	@include fontSize(16px);
+}
+h6 {
+	@include fontSize(13px);
+	@include caps;
+}
+
+blockquote p {
+    font-size: 125%;
+}

@@ -1,0 +1,13 @@
+/* WooCommerce
+-------------------------------------------------------------- */
+
+.woocommerce {
+    ul.products li.product a img { 
+        border: 0 !important;
+        &:hover { border: 0 !important; }
+    }
+    
+    button, .button {
+        border-radius: 0;
+    }
+}
