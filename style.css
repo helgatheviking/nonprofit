@@ -4,7 +4,7 @@
  * Author:      Kathy Darling
  * Author URI:  http://www.kathyisawesome.com
  * Description: A custom child theme of the Beaver Builder Theme for my projects
- * Version:     1.0.0
+ * Version: 1.0.0
  * License:     GNU General Public License v3 or later
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain: nonprofit
@@ -98,206 +98,6 @@ blockquote p {
     font-weight: bold;
   }
 }
-/* **********************************************
-   Forms and buttons
- ************************************************/
-.fl-page button:not(.navbar-toggle), .fl-page li.menu-item.button > a, .fl-page a.button, .fl-page input[type="button"], .fl-page input[type="reset"], .fl-page input[type="submit"] {
-  display: inline-block;
-  outline: none;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  line-height: 1.2;
-  padding: .75em 1.5em;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  position: relative;
-  opacity: .9999999;
-  overflow: hidden;
-  border: 0;
-  color: #FFFFFF !important;
-  font-weight: normal;
-  background: #798693;
-}
-.fl-page button:not(.navbar-toggle):hover, .fl-page li.menu-item.button > a:hover, .fl-page a.button:hover, .fl-page input[type="button"]:hover, .fl-page input[type="reset"]:hover, .fl-page input[type="submit"]:hover {
-  text-decoration: none;
-  background: #6d869f;
-  border: 0;
-}
-.fl-page button:not(.navbar-toggle):active, .fl-page li.menu-item.button > a:active, .fl-page a.button:active, .fl-page input[type="button"]:active, .fl-page input[type="reset"]:active, .fl-page input[type="submit"]:active {
-  position: relative;
-  top: 1px;
-  color: #6786a5;
-}
-.nonprofit-fancy-buttons .fl-page button:not(.navbar-toggle), .nonprofit-fancy-buttons .fl-page li.menu-item.button > a, .nonprofit-fancy-buttons .fl-page a.button, .nonprofit-fancy-buttons .fl-page input[type="button"], .nonprofit-fancy-buttons .fl-page input[type="reset"], .nonprofit-fancy-buttons .fl-page input[type="submit"] {
-  display: inline-block;
-  outline: none;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  line-height: 1.2;
-  padding: .75em 1.5em;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  position: relative;
-  opacity: .9999999;
-  overflow: hidden;
-  border: 0;
-  color: #FFFFFF !important;
-  font-weight: normal;
-  background: #d31a20;
-}
-.nonprofit-fancy-buttons .fl-page button:not(.navbar-toggle):hover, .nonprofit-fancy-buttons .fl-page li.menu-item.button > a:hover, .nonprofit-fancy-buttons .fl-page a.button:hover, .nonprofit-fancy-buttons .fl-page input[type="button"]:hover, .nonprofit-fancy-buttons .fl-page input[type="reset"]:hover, .nonprofit-fancy-buttons .fl-page input[type="submit"]:hover {
-  text-decoration: none;
-  background: #df0e15;
-  border: 0;
-}
-.nonprofit-fancy-buttons .fl-page button:not(.navbar-toggle):active, .nonprofit-fancy-buttons .fl-page li.menu-item.button > a:active, .nonprofit-fancy-buttons .fl-page a.button:active, .nonprofit-fancy-buttons .fl-page input[type="button"]:active, .nonprofit-fancy-buttons .fl-page input[type="reset"]:active, .nonprofit-fancy-buttons .fl-page input[type="submit"]:active {
-  position: relative;
-  top: 1px;
-  color: #e5080f;
-}
-.nonprofit-fancy-buttons .fl-page button:not(.navbar-toggle):after, .nonprofit-fancy-buttons .fl-page button:not(.navbar-toggle):before, .nonprofit-fancy-buttons .fl-page li.menu-item.button > a:after, .nonprofit-fancy-buttons .fl-page li.menu-item.button > a:before, .nonprofit-fancy-buttons .fl-page a.button:after, .nonprofit-fancy-buttons .fl-page a.button:before, .nonprofit-fancy-buttons .fl-page input[type="button"]:after, .nonprofit-fancy-buttons .fl-page input[type="button"]:before, .nonprofit-fancy-buttons .fl-page input[type="reset"]:after, .nonprofit-fancy-buttons .fl-page input[type="reset"]:before, .nonprofit-fancy-buttons .fl-page input[type="submit"]:after, .nonprofit-fancy-buttons .fl-page input[type="submit"]:before {
-  position: absolute;
-  content: " ";
-  top: 0;
-  left: 0;
-}
-.nonprofit-fancy-buttons .fl-page button:not(.navbar-toggle):before, .nonprofit-fancy-buttons .fl-page li.menu-item.button > a:before, .nonprofit-fancy-buttons .fl-page a.button:before, .nonprofit-fancy-buttons .fl-page input[type="button"]:before, .nonprofit-fancy-buttons .fl-page input[type="reset"]:before, .nonprofit-fancy-buttons .fl-page input[type="submit"]:before {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  width: 50%;
-  border-right: 5em solid #798693;
-  border-top: 5em solid #6c7986;
-  margin-left: -50%;
-  z-index: -299;
-  display: block;
-  transition: all .4s ease-in;
-}
-.nonprofit-fancy-buttons .fl-page button:not(.navbar-toggle):after, .nonprofit-fancy-buttons .fl-page li.menu-item.button > a:after, .nonprofit-fancy-buttons .fl-page a.button:after, .nonprofit-fancy-buttons .fl-page input[type="button"]:after, .nonprofit-fancy-buttons .fl-page input[type="reset"]:after, .nonprofit-fancy-buttons .fl-page input[type="submit"]:after {
-  background: #798693;
-  width: 100%;
-  height: 100%;
-  z-index: -300;
-}
-.nonprofit-fancy-buttons .fl-page button:not(.navbar-toggle):focus:before, .nonprofit-fancy-buttons .fl-page button:not(.navbar-toggle):hover:before, .nonprofit-fancy-buttons .fl-page li.menu-item.button > a:focus:before, .nonprofit-fancy-buttons .fl-page li.menu-item.button > a:hover:before, .nonprofit-fancy-buttons .fl-page a.button:focus:before, .nonprofit-fancy-buttons .fl-page a.button:hover:before, .nonprofit-fancy-buttons .fl-page input[type="button"]:focus:before, .nonprofit-fancy-buttons .fl-page input[type="button"]:hover:before, .nonprofit-fancy-buttons .fl-page input[type="reset"]:focus:before, .nonprofit-fancy-buttons .fl-page input[type="reset"]:hover:before, .nonprofit-fancy-buttons .fl-page input[type="submit"]:focus:before, .nonprofit-fancy-buttons .fl-page input[type="submit"]:hover:before {
-  width: 160%;
-}
-.fl-page .navbar .menu .button a,
-.fl-page .navbar .nav-menu .button a {
-  display: inline-block;
-  outline: none;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  line-height: 1.2;
-  padding: .75em 1.5em;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  position: relative;
-  opacity: .9999999;
-  overflow: hidden;
-  border: 0;
-  color: #FFFFFF !important;
-  font-weight: normal;
-  background: #00cad8;
-  padding: 15px;
-}
-.fl-page .navbar .menu .button a:hover,
-.fl-page .navbar .nav-menu .button a:hover {
-  text-decoration: none;
-  background: #00cad8;
-  border: 0;
-}
-.fl-page .navbar .menu .button a:active,
-.fl-page .navbar .nav-menu .button a:active {
-  position: relative;
-  top: 1px;
-  color: #00cad8;
-}
-.fl-page .navbar .menu .button a:hover,
-.fl-page .navbar .nav-menu .button a:hover {
-  color: #FFFFFF;
-}
-.nonprofit-fancy-buttons .fl-page .navbar .menu .button, .nonprofit-fancy-buttons
-.fl-page .navbar .nav-menu .button {
-  display: inline-block;
-  outline: none;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  line-height: 1.2;
-  padding: .75em 1.5em;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  position: relative;
-  opacity: .9999999;
-  overflow: hidden;
-  border: 0;
-  color: #FFFFFF !important;
-  font-weight: normal;
-  background: #d31a20;
-  padding: 15px;
-}
-.nonprofit-fancy-buttons .fl-page .navbar .menu .button:hover, .nonprofit-fancy-buttons
-.fl-page .navbar .nav-menu .button:hover {
-  text-decoration: none;
-  background: #df0e15;
-  border: 0;
-}
-.nonprofit-fancy-buttons .fl-page .navbar .menu .button:active, .nonprofit-fancy-buttons
-.fl-page .navbar .nav-menu .button:active {
-  position: relative;
-  top: 1px;
-  color: #e5080f;
-}
-.nonprofit-fancy-buttons .fl-page .navbar .menu .button:after, .nonprofit-fancy-buttons .fl-page .navbar .menu .button:before, .nonprofit-fancy-buttons
-.fl-page .navbar .nav-menu .button:after, .nonprofit-fancy-buttons
-.fl-page .navbar .nav-menu .button:before {
-  position: absolute;
-  content: " ";
-  top: 0;
-  left: 0;
-}
-.nonprofit-fancy-buttons .fl-page .navbar .menu .button:before, .nonprofit-fancy-buttons
-.fl-page .navbar .nav-menu .button:before {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  width: 50%;
-  border-right: 5em solid #00cad8;
-  border-top: 5em solid #00b2bf;
-  margin-left: -50%;
-  z-index: -299;
-  display: block;
-  transition: all .4s ease-in;
-}
-.nonprofit-fancy-buttons .fl-page .navbar .menu .button:after, .nonprofit-fancy-buttons
-.fl-page .navbar .nav-menu .button:after {
-  background: #00cad8;
-  width: 100%;
-  height: 100%;
-  z-index: -300;
-}
-.nonprofit-fancy-buttons .fl-page .navbar .menu .button:focus:before, .nonprofit-fancy-buttons .fl-page .navbar .menu .button:hover:before, .nonprofit-fancy-buttons
-.fl-page .navbar .nav-menu .button:focus:before, .nonprofit-fancy-buttons
-.fl-page .navbar .nav-menu .button:hover:before {
-  width: 160%;
-}
-.nonprofit-fancy-buttons .fl-page .navbar .menu .button:hover, .nonprofit-fancy-buttons
-.fl-page .navbar .nav-menu .button:hover {
-  color: #FFFFFF;
-}
-
 form legend {
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -312,9 +112,6 @@ form .col-2-wrap {
   margin-right: 0;
 }
 
-/* **********************************************
-   Widgets
- ************************************************/
 /* **********************************************
    Features by WooThemes
  ************************************************/
@@ -456,6 +253,9 @@ form .col-2-wrap {
 }
 .woocommerce button, .woocommerce .button {
   border-radius: 0;
+}
+.woocommerce .cart-collaterals .cart_totals table th, .woocommerce .cart-collaterals .cart_totals table td {
+  padding: 10px !important;
 }
 
 /* **********************************************
