@@ -2,37 +2,7 @@
    Forms and buttons
  ************************************************/
 
-.fl-page {
-	
-	button:not(.navbar-toggle), li.menu-item.button> a, a.button, input[type="button"], input[type="reset"], input[type="submit"]{
-		@include button( darken($light-gray, 40%) );
-		.nonprofit-fancy-buttons & {
-			@include fancybutton( darken($light-gray, 40%) );
-		}
-	}
-	
-	// fix buttons in the menu
-	.navbar .menu .button, 
-	.navbar .nav-menu .button {
-		
-		//overflow: hidden;
-		a {
-			@include button($alt-color, $white );
-			padding: 15px;
-			&:hover {
-				color: $white;
-			}
-		}
-
-		.nonprofit-fancy-buttons & {
-			@include fancybutton($alt-color, $white );
-			padding: 15px;
-			&:hover {
-				color: $white;
-			}
-		}
-	
-	}
-
+button, .button {
+	border-radius: 0;
 }
 

@@ -113,6 +113,13 @@ form .col-2-wrap {
 }
 
 /* **********************************************
+   Forms and buttons
+ ************************************************/
+button, .button {
+  border-radius: 0;
+}
+
+/* **********************************************
    Features by WooThemes
  ************************************************/
 .widget_woothemes_features .widgettitle {
@@ -245,14 +252,11 @@ form .col-2-wrap {
 
 /* WooCommerce
 -------------------------------------------------------------- */
-.woocommerce ul.products li.product a img {
+.woocommerce div.product div.images img, .woocommerce ul.products li.product a img {
   border: 0 !important;
 }
-.woocommerce ul.products li.product a img:hover {
+.woocommerce div.product div.images img:hover, .woocommerce ul.products li.product a img:hover {
   border: 0 !important;
-}
-.woocommerce button, .woocommerce .button {
-  border-radius: 0;
 }
 .woocommerce .cart-collaterals .cart_totals table th, .woocommerce .cart-collaterals .cart_totals table td {
   padding: 10px !important;
@@ -261,6 +265,18 @@ form .col-2-wrap {
   text-align: center;
   display: block;
   width: 100%;
+}
+.woocommerce nav.woocommerce-MyAccount-navigation ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.woocommerce nav.woocommerce-MyAccount-navigation ul a {
+  padding: .4em 0;
+  display: block;
+  border-bottom: 1px solid rgba(23, 23, 23, 0.13);
+}
+.is-active .woocommerce nav.woocommerce-MyAccount-navigation ul a {
+  font-weight: bold;
 }
 
 /* **********************************************
