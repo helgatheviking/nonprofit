@@ -1,0 +1,52 @@
+{
+  "name": "nonprofit",
+  "version": "1.0.0",
+  "description": "A custom child theme of Make with Beaver Builder support",
+  "main": "Gruntfile.js",
+  "devDependencies": {
+    "autoprefixer": "^6.1.2",
+    "cssjanus": "^1.1.2",
+    "cssnano": "^3.4.0",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-cssjanus": "^0.3.2",
+    "grunt-postcss": "^0.8.0",
+    "grunt-text-replace": "^0.4.0",
+    "grunt-wp-i18n": "^0.5.3",
+    "grunt-wp-readme-to-markdown": "^2.0.1",
+    "load-grunt-tasks": "^3.3.0",
+    "pixrem": "^3.0.0"
+  },
+  "scripts": {
+    "test": "default"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/helgatheviking/nonprofit.git"
+  },
+  "keywords": [
+    "Builder",
+    "Beaver",
+    "Make",
+    "page",
+    "builder",
+    "child",
+    "theme",
+    "white",
+    "two-columns",
+    "non-profit",
+    "left-sidebar",
+    "right-sidebar"
+  ],
+  "author": "helgatheviking",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/helgatheviking/nonprofit/issues"
+  },
+  "homepage": "https://github.com/helgatheviking/nonprofit"
+}
