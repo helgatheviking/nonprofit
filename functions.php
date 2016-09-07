@@ -43,8 +43,12 @@ function nonprofit_setup(){
 function nonprofit_scripts() {
 
 	if ( SCRIPT_DEBUG || WP_DEBUG ){
+		wp_enqueue_script( 'sidr', get_stylesheet_directory_uri() . '/js/vendors/jquery.sidr.js', array( 'jquery' ) );
+		wp_enqueue_script( 'nonprofit', get_stylesheet_directory_uri() . '/js/development.js', array( 'jquery' ) );
 		wp_enqueue_style( 'main-style',  get_stylesheet_directory_uri() . '/style.css' );
 	} else {
+		wp_enqueue_script( 'sidr', get_stylesheet_directory_uri() . '/js/vendors/jquery.sidr.min.js', array( 'jquery' ) );
+		wp_enqueue_script( 'nonprofit', get_stylesheet_directory_uri() . '/js/production.min.js', array( 'jquery' ) );
 		wp_enqueue_style( 'main-style',  get_stylesheet_directory_uri() . '/style.min.css' );
 	}
 
@@ -161,3 +165,20 @@ function wpse_78345_alter_blog_name( $title, $show ) {
 
 add_filter( 'bloginfo', 'wpse_78345_alter_blog_name', 10, 2 );
 
+
+/* **********************************************
+   Sidr Widget Area
+ ************************************************/
+add_action( 'widgets_init', '_sidr_widget_area' );
+function _sidr_widget_area() {
+
+	register_sidebar( array(
+		'name'          => 'Sidr Widget Area',
+		'id'            => 'sidr-widget-area',
+		'before_widget' => '<div class="fl-widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="fl-widget-title">',
+		'after_title'   => '</h4>'
+	) );
+
+}

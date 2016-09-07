@@ -11,7 +11,7 @@
  * Domain Path: /languages/
  * Tags:        black, blue, green, gray, orange, red, white, yellow, dark, light, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, fixed-layout, fluid-layout, responsive-layout, buddypress, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, photoblogging
  * Template:	bb-theme
- * 
+ *
  * Beaver Builder Theme, by The Beaver Builder Team
  *
  * Generated with sass from scss/style.scss
@@ -21,6 +21,7 @@
 @import "mixins";
 @import "typography";
 @import "menu";
+@import "sidr";
 @import "form";
 @import "buttons";
 
@@ -31,6 +32,5 @@
 @import "woocommerce";
 @import "charitable";
 
-
+// no-JS fixes
 @import "no-js";
-
