@@ -1,32 +1,47 @@
 jQuery(document).ready(function($) {
-    $('#toggle-off-canvas-area').sidr({
+    $('#navbar-toggle').sidr({
         side: 'right',
-        onOpen: function(){
-            $('.sidr-closer').addClass('active');
-            $('.fl-hamburger-menu .icon').toggleClass('icon-hide');
-
-            if ( $('#wpadminbar').length )
-            {
-                $('#wpadminbar').css({
-                    'display' : 'none'
-                });
-            }
+        name: 'sidr-main',
+        source: '#sidr',
+        displace: true,
+        renaming: false,
+        onOpen: function(){ 
+            $('.sidr-overlay').addClass('active');
+            $('#navbar-toggle i').addClass('fa-close').removeClass('fa-bars');
         },
         onClose: function() {
-            $('.sidr-closer').removeClass('active');
-            $('.fl-hamburger-menu .icon').toggleClass('icon-hide');
-            if ( $('#wpadminbar').length )
-            {
-                setTimeout(function(){
-                    $('#wpadminbar').css({
-                        'display' : 'block'
-                    });
-                }, 260);
-            }
+            $('.sidr-overlay').removeClass('active');
+            $('#navbar-toggle i').addClass('fa-bars').removeClass('fa-close')
         }
     });
 
-    $('.sidr-closer').on('click', function(){
-        $.sidr('close', 'sidr');
+    $('.sidr-overlay').on('click', function(){
+        $.sidr('close', 'sidr-main');
+    });
+
+    $('.sidr-close').on('click', function(){
+        $.sidr('close', 'sidr-main');
+    });
+
+    $( window ).resize(function () {
+      $.sidr('close', 'sidr-main');
+    });
+
+    $(document).keyup(function(e) {
+        if (e.keyCode === 27){ // esc
+            $.sidr('close', 'sidr-main');  
+        }
+    });
+
+    $('body').swipe( {
+        //Single swipe handler for left swipes
+        swipeRight: function () {
+            $.sidr('close', 'sidr-main');
+        },
+        swipeLeft: function () {
+            $.sidr('open', 'sidr-main');
+        },
+        //Default is 75px, set to 0 for demo so any distance triggers swipe
+        threshold: 45
     });
 });

@@ -1,170 +1,74 @@
+$sidebar-width: 260px;
+$sidebar-width-neg: -260px;
+
 .sidr {
   display: block;
   position: fixed;
   top: 0;
   height: 100%;
   z-index: 999999;
-  width: 260px;
+  width: $sidebar-width;
   overflow-x: hidden;
   overflow-y: auto;
-  font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
-  font-size: 15px;
   background: #f8f8f8;
-  color: #333;
-  box-shadow: 0 0 5px 5px #ebebeb inset;
-  .sidr-inner {
-    padding: 0 0 15px;
-    > p {
-      margin-left: 15px;
-      margin-right: 15px;
-    }
-  }
+  padding: 1em;
+
   &.right {
     left: auto;
-    right: -260px;
+    right: $sidebar-width-neg;
   }
   &.left {
-    left: -260px;
+    left: $sidebar-width-neg;
     right: auto;
   }
-  .widget-area {
-      padding: 0 15px;
-  }
-  p {
-    font-size: 13px;
-    margin: 0 0 12px;
-    a {
-      color: rgba(51, 51, 51, 0.9);
-    }
-  }
-  > p {
-    margin-left: 15px;
-    margin-right: 15px;
-  }
+
   ul {
     display: block;
     margin: 0 0 15px;
     padding: 0;
-    border-top: 1px solid #dfdfdf;
-    border-bottom: 1px solid white;
+    clear: both;
     li {
       display: block;
       margin: 0;
-      line-height: 48px;
-      border-top: 1px solid white;
-      border-bottom: 1px solid #dfdfdf;
       &:hover, &.active, &.sidr-class-active {
-        line-height: 49px;
+        // line-height: 49px;
       }
-      &:hover > {
-        a, span {
-          box-shadow: 0 0 15px 3px #ebebeb inset;
-        }
-      }
-      &.active > {
-        a, span {
-          box-shadow: 0 0 15px 3px #ebebeb inset;
-        }
-      }
-      &.sidr-class-active > {
-        a, span {
-          box-shadow: 0 0 15px 3px #ebebeb inset;
-        }
-      }
-      a, span {
-        padding: 0 15px;
+      a {
         display: block;
-        text-decoration: none;
-        color: #333;
+        font-size: 1em;
+        line-height: 3em;
       }
       ul {
         border-bottom: 0;
         margin: 0;
-        li {
-          line-height: 40px;
-          font-size: 13px;
-          &:last-child {
-            border-bottom: 0;
-          }
-          &:hover, &.active, &.sidr-class-active {
-            border-top: 0;
-            line-height: 41px;
-          }
-          &:hover > {
-            a, span {
-              box-shadow: 0 0 15px 3px #ebebeb inset;
-            }
-          }
-          &.active > {
-            a, span {
-              box-shadow: 0 0 15px 3px #ebebeb inset;
-            }
-          }
-          &.sidr-class-active > {
-            a, span {
-              box-shadow: 0 0 15px 3px #ebebeb inset;
-            }
-          }
-          a, span {
-            color: rgba(51, 51, 51, 0.8);
-            padding-left: 30px;
-          }
-        }
       }
-    }
-  }
-  label {
-    font-size: 13px;
-  }
-  input {
-    &[type="text"], &[type="password"], &[type="date"], &[type="datetime"], &[type="email"], &[type="number"], &[type="search"], &[type="tel"], &[type="time"], &[type="url"] {
-      width: 100%;
-      font-size: 13px;
-      padding: 5px;
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      margin: 0 0 10px;
-      border-radius: 2px;
-      border: 0;
-      background: rgba(0, 0, 0, 0.1);
-      color: rgba(51, 51, 51, 0.6);
-      display: block;
-      clear: both;
-    }
-  }
-  textarea, select {
-    width: 100%;
-    font-size: 13px;
-    padding: 5px;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0 0 10px;
-    border-radius: 2px;
-    border: 0;
-    background: rgba(0, 0, 0, 0.1);
-    color: rgba(51, 51, 51, 0.6);
-    display: block;
-    clear: both;
-  }
-  input {
-    &[type=checkbox] {
-      width: auto;
-      display: inline;
-      clear: none;
-    }
-    &[type=button], &[type=submit] {
-      color: #f8f8f8;
-      background: #333;
-    }
-    &[type=button]:hover, &[type=submit]:hover {
-      background: rgba(51, 51, 51, 0.9);
     }
   }
 }
 
-.sidr-closer {
+#sidr {
+  .sidr-widget-area { display: none; }
+  .sidr-close { display: none; }
+}
+
+
+
+.sidr-open {
+  #navbar-toggle{
+    display: none;
+  }
+  .sidr-close { 
+    cursor: pointer; 
+    margin-bottom: .5em;
+    float: right;
+    &:before{ margin-right: .25em; }
+  }
+  .sidr-widget-area{
+    display: block;
+  }
+}
+
+.sidr-overlay {
     display: block;
     position: fixed;
     top: 0;
@@ -181,45 +85,5 @@
     &.active {
         opacity: 1;
         visibility: visible;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .fl-hamburger-menu {
-        float: right;
-        margin-top: 10px;
-        width: 32px;
-        height: 32px;
-        position: relative;
-        cursor: pointer;
-
-        .icon {
-            width: 32px;
-            height: 32px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: inline-block;
-            transition: all 300ms ease;
-
-            &.icon-hide {
-                opacity: 0;
-                visibility: hidden;
-            }
-
-            &.icon-close {
-                svg {
-                    width: 24px;
-                    height: 24px;
-                    position: relative;
-                    top: 4px;
-                    left: 4px;
-                }
-            }
-        }
-    }
-    .fl-page-nav-right .fl-page-header-logo.fl-page-header-logo-hamburger {
-        padding-bottom: 0;
-        float: left;
     }
 }
