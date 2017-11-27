@@ -4,7 +4,7 @@
 define( 'FL_CHILD_THEME_DIR', get_stylesheet_directory() );
 define( 'FL_CHILD_THEME_URL', get_stylesheet_directory_uri() );
 
-define( 'FL_CHILD_VERSION', '1.0.0' );
+define( 'FL_CHILD_VERSION', '1.1.0' );
 
 
 /**

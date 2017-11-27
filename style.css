@@ -4,7 +4,7 @@
  * Author:      Kathy Darling
  * Author URI:  http://www.kathyisawesome.com
  * Description: A custom child theme of the Beaver Builder Theme for my projects
- * Version: 1.0.0
+ * Version:     1.0.0
  * License:     GNU General Public License v3 or later
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain: nonprofit
@@ -38,13 +38,13 @@
 -------------------------------------------------------------- */
 /* =Typography
 -------------------------------------------------------------- */
-h1, h2, h3, .fl-builder .widgettitle, h4, .team-member h3.member, .team-member .fl-builder .member.widgettitle, .fl-builder .team-member .member.widgettitle, .fl-builder h2.fl-post-feed-title, h5, h6, .heading {
+h1, h2, h3, h4, .team-member h3.member, h5, h6, .heading {
   font-family: Futura, "Century Gothic", AppleGothic, sans-serif;
   font-weight: bold;
   line-height: 1.2;
   letter-spacing: 1px;
 }
-h1::after, h2::after, h3::after, .fl-builder .widgettitle::after, h4::after, .team-member h3.member::after, .team-member .fl-builder .member.widgettitle::after, .fl-builder .team-member .member.widgettitle::after, .fl-builder h2.fl-post-feed-title::after, h5::after, h6::after, .heading::after {
+h1::after, h2::after, h3::after, h4::after, .team-member h3.member::after, h5::after, h6::after, .heading::after {
   clear: both;
   content: "";
   display: table;
@@ -60,12 +60,12 @@ h2 {
   font-size: 3.4rem;
 }
 
-h3, .fl-builder .widgettitle {
+h3 {
   font-size: 24px;
   font-size: 2.4rem;
 }
 
-h4, .team-member h3.member, .team-member .fl-builder .member.widgettitle, .fl-builder .team-member .member.widgettitle, .fl-builder h2.fl-post-feed-title {
+h4, .team-member h3.member {
   font-size: 21px;
   font-size: 2.1rem;
 }
@@ -86,99 +86,6 @@ blockquote p {
   font-size: 125%;
 }
 
-/* Main Menu
--------------------------------------------------------------- */
-.fl-page-nav .navbar-nav > li > a {
-  letter-spacing: 1px;
-}
-
-@media (min-width: 992px) {
-  .fl-page-nav-right .fl-page-nav-wrap .navbar-nav > li.current-menu-item > a {
-    color: inherit;
-    font-weight: bold;
-  }
-}
-.sidr {
-  display: block;
-  position: fixed;
-  top: 0;
-  height: 100%;
-  z-index: 999999;
-  width: 260px;
-  overflow-x: hidden;
-  overflow-y: auto;
-  background: #f8f8f8;
-  padding: 1em;
-}
-.sidr.right {
-  left: auto;
-  right: -260px;
-}
-.sidr.left {
-  left: -260px;
-  right: auto;
-}
-.sidr ul {
-  display: block;
-  margin: 0 0 15px;
-  padding: 0;
-  clear: both;
-}
-.sidr ul li {
-  display: block;
-  margin: 0;
-}
-.sidr ul li a {
-  display: block;
-  font-size: 1em;
-  line-height: 3em;
-}
-.sidr ul li ul {
-  border-bottom: 0;
-  margin: 0;
-}
-
-#sidr .sidr-widget-area {
-  display: none;
-}
-#sidr .sidr-close {
-  display: none;
-}
-
-.sidr-open #navbar-toggle {
-  display: none;
-}
-.sidr-open .sidr-close {
-  cursor: pointer;
-  margin-bottom: .5em;
-  float: right;
-}
-.sidr-open .sidr-close:before {
-  margin-right: .25em;
-}
-.sidr-open .sidr-widget-area {
-  display: block;
-}
-
-.sidr-overlay {
-  display: block;
-  position: fixed;
-  top: 0;
-  height: 100%;
-  z-index: 999998;
-  background: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  left: 0;
-  visibility: hidden;
-  opacity: 0;
-  transition: all 300ms ease;
-  cursor: pointer;
-}
-.sidr-overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-
 form legend {
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -191,6 +98,10 @@ form .col-1-wrap, form .col-2-wrap {
 }
 form .col-2-wrap {
   margin-right: 0;
+}
+form input[type="text"], form input[type="password"], form input[type="email"], form input[type="tel"], form input[type="date"], form input[type="month"], form input[type="week"], form input[type="time"], form input[type="number"], form input[type="search"], form input[type="url"] {
+  height: auto;
+  border-radius: 0;
 }
 
 /* **********************************************
@@ -272,65 +183,6 @@ button, .button {
   font-style: italic;
 }
 
-/* **********************************************
-   Beaver Builder
- ************************************************/
-.fl-builder .fl-row.pattern-overlay .fl-row-content-wrap:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 0;
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAADCAYAAAC56t6BAAAAGUlEQVQIW2NkYGCoZ2BgaGRkgIB6EAMsAgAdPwKD+nCs1AAAAABJRU5ErkJggg==);
-}
-.fl-builder .fl-row-fixed-width {
-  max-width: 1100px;
-}
-.fl-builder blockquote {
-  border: 0;
-}
-.fl-builder .widget {
-  margin-bottom: 44px;
-  margin-bottom: 4.4rem;
-  font-size: inherit;
-}
-.fl-builder .widgettitle {
-  margin-top: 0;
-}
-.fl-builder h2.fl-post-feed-title {
-  margin: 0 0 11px 0;
-  margin: 0 0 1.1rem 0;
-}
-.fl-builder .fl-post-feed-post {
-  border-bottom: 0;
-  padding-bottom: 0;
-}
-.fl-builder .fl-number .fl-number-before-text, .fl-builder .fl-number .fl-number-after-text {
-  font-size: 65%;
-  line-height: 1.2;
-}
-.fl-builder .fl-row.feature h1, .fl-builder .fl-row.feature h2, .fl-builder .fl-row.feature h3, .fl-builder .fl-row.feature .widgettitle {
-  text-shadow: 2px 2px 2px #000;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.45);
-}
-.fl-builder .fl-post-grid-text {
-  padding: 10px;
-}
-
-.single-fl-builder-template .site-content > .container {
-  width: 100%;
-  max-width: none;
-  padding: 0;
-  clear: both;
-}
-.single-fl-builder-template .site-content > .container .site-main {
-  width: 100%;
-  float: none;
-}
-
 /* WooCommerce
 -------------------------------------------------------------- */
 .woocommerce div.product div.images img, .woocommerce ul.products li.product a img {
@@ -363,28 +215,73 @@ button, .button {
 /* **********************************************
    WP Charitable
  ************************************************/
-.js #charitable-donation-form .donation-amounts .donation-amount input[type=radio] {
-  display: none;
-}
-
-.widget_charitable_donate_widget #charitable-donation-form .donation-amounts .donation-amount {
-  width: auto;
-  margin-right: 1em;
-  font-size: 1.5em;
-  background: #b9bcbf;
-}
-.widget_charitable_donate_widget #charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount {
-  float: none;
-  clear: both;
+.charitable-notice {
   border: 0;
   padding: 0;
 }
-.widget_charitable_donate_widget #charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount.selected {
-  background: none;
+.charitable-notice > ul li {
+  padding: 1em;
+  border-left: 3px solid #fc9a11;
 }
-.widget_charitable_donate_widget #charitable-donation-form .button-primary {
+
+.charitable-donation-form .charitable-form-fields .charitable-fieldset {
+  padding: 0;
+  border: 0;
+}
+.charitable-donation-form .charitable-form-field label {
+  font-weight: normal;
+}
+.charitable-donation-form .charitable-donation-options {
+  padding: 0;
+}
+.charitable-donation-form .donation-amounts .donation-amount {
+  font-size: 1.5em;
+  background: transparent;
+  border: 2px solid #111;
+  width: 31.6%;
+  margin-right: 2%;
+  text-align: center;
+}
+.charitable-donation-form .donation-amounts .donation-amount:nth-child(2n+2) {
+  margin-right: 2%;
+}
+.charitable-donation-form .donation-amounts .donation-amount:nth-child(3n+3) {
+  margin-right: 0;
+}
+.charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount {
+  clear: both;
+  width: 100%;
+  margin-right: 0;
+  background: none;
+  text-align: left;
+  border: 0;
+}
+.charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount label {
+  font-size: .75em;
+  font-weight: normal;
+}
+.charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount input {
+  border-radius: 0;
+  padding: 1em;
+  height: auto;
+}
+.charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount .custom-donation-amount-wrapper {
+  padding: 0;
+}
+.charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount.selected {
+  background: none;
+  color: #111;
+}
+.charitable-donation-form .donation-amounts .donation-amount.custom-donation-amount.selected input {
+  border-bottom: 2px solid #111;
+}
+.charitable-donation-form .recurring-donation-option {
+  text-align: center;
+}
+.charitable-donation-form .button-primary {
   font-size: 1.5em;
   border: 0;
+  width: 100%;
 }
 
 .no-js .site-navigation .menu-toggle {
