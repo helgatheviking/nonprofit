@@ -2,42 +2,95 @@
    WP Charitable
  ************************************************/
 
-.js #charitable-donation-form .donation-amounts .donation-amount input[type=radio]{
-	display: none;
+.charitable-notice {
+	border: 0;
+	padding: 0;
+	
+	> ul li {
+	    padding: 1em;
+	    border-left: 3px solid $accent-color;
+	}
 }
 
 
-.widget_charitable_donate_widget {
 
-	#charitable-donation-form {
+.charitable-donation-form {
+	
+	.charitable-form-fields .charitable-fieldset {
+		padding: 0;
+		border: 0;
+	}
+	
+	.charitable-form-field label {
+		font-weight: normal;
+	}
+	
+	.charitable-donation-options {
+	    padding: 0;
+	}
 
-		.donation-amounts {
+	.donation-amounts {
 
-			.donation-amount {
-				width: auto;
-	    		margin-right: 1em;
-	    		font-size: 1.5em;
-	    		background: $offwhite;
-
-	    		&.custom-donation-amount {
-				    float: none;
-				    clear: both;
-				    border: 0;
-				    padding: 0;
-
-				    &.selected {
-				    	background: none;
-				    }
-	    		}
+		.donation-amount {
+    		font-size: 1.5em;
+    		background: transparent;
+    		border: 2px solid #111;
+    		width: 31.6%;
+			margin-right: 2%;
+			text-align: center;
+			
+			&:nth-child(2n+2){
+				margin-right: 2%;
 			}
+			&:nth-child(3n+3){
+				margin-right: 0;
+			}
+		
 
+	    	&.custom-donation-amount {
+	    		clear: both;
+	    		width: 100%;
+				margin-right: 0;
+				background: none;
+				text-align: left;
+				border: 0;
+				
+				label {
+					font-size: .75em;
+					font-weight: normal;
+				}
+				input {
+					border-radius: 0;
+					padding: 1em;
+					height: auto;
+				}
+			
+				.custom-donation-amount-wrapper {
+					padding: 0;
+				}
+				
+				&.selected {
+					background: none;
+					color: #111;
+					
+					input {
+						border-bottom: 2px solid #111;
+					}
+
+				}
+			}
 		}
 
-		.button-primary {
-			font-size: 1.5em;
-			border: 0;
-		}
+	}
+	
+	.recurring-donation-option {
+		text-align: center;
+	}
 
+	.button-primary {
+		font-size: 1.5em;
+		border: 0;
+		width: 100%;
 	}
 
 }
