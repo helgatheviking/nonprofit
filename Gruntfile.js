@@ -124,8 +124,8 @@ module.exports = function(grunt) {
 				],
 				overwrite: true,
 				replacements: [ {
-					from: /^define\( 'LUMINATE_VERSION'.*$/m,
-					to: 'define( \'LUMINATE_VERSION\', \'<%= pkg.version %>\' );'
+					from: /^define\( 'FL_CHILD_VERSION'.*$/m,
+					to: 'define( \'FL_CHILD_VERSION\', \'<%= pkg.version %>\' );'
 				} ]
 			},
 		},
