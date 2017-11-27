@@ -41,31 +41,11 @@ function nonprofit_setup(){
  * @return void
  */
 function nonprofit_scripts() {
-
-	if ( SCRIPT_DEBUG || WP_DEBUG ){
-		wp_enqueue_script( 'touchswipe', get_stylesheet_directory_uri() . '/js/vendors/jquery.touchSwipe.js', array( 'jquery' ) );
-		wp_enqueue_script( 'sidr', get_stylesheet_directory_uri() . '/js/vendors/jquery.sidr.js', array( 'jquery' ) );
-		wp_enqueue_script( 'nonprofit', get_stylesheet_directory_uri() . '/js/development.js', array( 'jquery' ) );
-		wp_enqueue_style( 'main-style',  get_stylesheet_directory_uri() . '/style.css' );
-	} else {
-		wp_enqueue_script( 'touchswipe', get_stylesheet_directory_uri() . '/js/vendors/jquery.touchSwipe.min.js', array( 'jquery' ) );
-		wp_enqueue_script( 'sidr', get_stylesheet_directory_uri() . '/js/vendors/jquery.sidr.js', array( 'jquery' ) );
-		wp_enqueue_script( 'nonprofit', get_stylesheet_directory_uri() . '/js/production.min.js', array( 'jquery' ) );
-		wp_enqueue_style( 'main-style',  get_stylesheet_directory_uri() . '/style.min.css' );
-	}
-
+	$suffix = SCRIPT_DEBUG || WP_DEBUG ? '' : '.min';
+	wp_enqueue_style( 'main-style',  get_stylesheet_directory_uri() . '/style' . $suffix . '.css' );
 }
 add_action( 'wp_enqueue_scripts', 'nonprofit_scripts', 20 );
 
-// add ID to menu container
-add_filter( 'wp_nav_menu_args', 'nonprofit_modify_nav_menu_args' );
-function nonprofit_modify_nav_menu_args( $args ){
-	if( 'header' == $args['theme_location'] ){
-		$args['container_id'] = 'menu-header-container';
-		$args['menu_id'] = 'menu-header-nav';
-	} 
-	return $args;
-}
 
 
 /* **********************************************
@@ -153,34 +133,4 @@ function nonprofit_custom_sizes( $sizes ) {
     return array_merge( $sizes, array(
         'banner' => __( 'Banner', 'non-profit' ),
     ) );
-}
-
-
-
-
-function wpse_78345_alter_blog_name( $title, $show ) {
-    if ( $show == 'name' ) {
-    	$title = str_replace("#BR#", "<br/>", $title);
-    }
-    return $title;
-}
-
-add_filter( 'bloginfo', 'wpse_78345_alter_blog_name', 10, 2 );
-
-
-/* **********************************************
-   Sidr Widget Area
- ************************************************/
-add_action( 'widgets_init', '_sidr_widget_area' );
-function _sidr_widget_area() {
-
-	register_sidebar( array(
-		'name'          => 'Sidr Widget Area',
-		'id'            => 'sidr-widget-area',
-		'before_widget' => '<div id="%1$s" class="sidr-widget-area fl-widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h4 class="fl-widget-title">',
-		'after_title'   => '</h4>'
-	) );
-
 }
