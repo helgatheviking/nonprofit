@@ -15,7 +15,7 @@ module.exports = function(grunt) {
 				},
 			},
 			sass: {
-				files: ['scss/*.scss'],
+				files: ['assets/scss/*.scss'],
 				tasks: ['css'],
 				options: {
 				  spawn: false,
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
 					style: 'expanded'
 		    	},
 		    	files: {                         // Dictionary of files
-					'style.css': 'scss/style.scss',       // 'destination': 'source'
+					'style.css': 'assets/scss/style.scss',       // 'destination': 'source'
 		    	}
 		    }
 		  },
