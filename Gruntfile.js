@@ -57,35 +57,6 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		concat: {
-			release: {
-				src: [
-					'js/app/**.js'
-				],
-				dest: 'js/development.js',
-			}
-		},
-		uglify: {
-			options: {
-				extDot: 'last',
-				mangle: {
-					except: ['jQuery', 'sidr', 'fastClick', 'fitVids']
-				},
-				drop_console: true
-			},
-			vendors: {
-				files: {
-					'js/vendors/jquery.fastclick.min.js' : 'js/vendors/fastclick.js',
-					'js/vendors/jquery.fitvids.min.js' : 'js/vendors/jquery.fitvids.js',
-					'js/vendors/jquery.sidr.min.js' : 'js/vendors/sidr.js',
-				}
-			},
-			app: {
-				files: {
-					'js/production.min.js' : 'js/development.js',
-				}
-			},
-		},
 		// https://www.npmjs.org/package/grunt-wp-i18n
 		makepot: {
 			target: {
@@ -175,8 +146,6 @@ module.exports = function(grunt) {
 		'sass',
 		'postcss',
 		'cssmin',
-		'concat:release',
-		'uglify:app',
 		'makepot',
 		'cssjanus'
 	]);
